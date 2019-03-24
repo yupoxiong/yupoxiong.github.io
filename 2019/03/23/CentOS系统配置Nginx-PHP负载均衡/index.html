@@ -96,24 +96,25 @@
 
 
 
-  <meta name="description" content="记录一些接触过的技术和踩过的坑。">
-<meta name="keywords" content="于破熊,PHP,MySql,Blog,JAVA,Linux,Go,Laravel,ThinkPHP,程序员,代码,软件开发,网站开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="于破熊的博客">
-<meta property="og:url" content="https://blog.yupoxiong.com/tags/git/index.html">
+  <meta name="description" content="本教程采用1台转发服务器和2台应用服务器（硬件配置相同）作为示例，系统均为CentOS7.4，网址为https://blog.yufuping.com，转发服务器为443端口，内网转发到应用服务器的80端口。本教程采用权重策略，其他策略可参考网络资料。 第一步，安装转发Nginx安装gcc1yum install gcc gcc-c++ 安装pcre1yum install -y pcre pcr">
+<meta name="keywords" content="PHP,Nginx,CentOS,负载均衡,环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS系统配置Nginx+PHP负载均衡">
+<meta property="og:url" content="https://blog.yupoxiong.com/2019/03/23/CentOS系统配置Nginx-PHP负载均衡/index.html">
 <meta property="og:site_name" content="于破熊的博客">
-<meta property="og:description" content="记录一些接触过的技术和踩过的坑。">
+<meta property="og:description" content="本教程采用1台转发服务器和2台应用服务器（硬件配置相同）作为示例，系统均为CentOS7.4，网址为https://blog.yufuping.com，转发服务器为443端口，内网转发到应用服务器的80端口。本教程采用权重策略，其他策略可参考网络资料。 第一步，安装转发Nginx安装gcc1yum install gcc gcc-c++ 安装pcre1yum install -y pcre pcr">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-24T08:17:19.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="于破熊的博客">
-<meta name="twitter:description" content="记录一些接触过的技术和踩过的坑。">
+<meta name="twitter:title" content="CentOS系统配置Nginx+PHP负载均衡">
+<meta name="twitter:description" content="本教程采用1台转发服务器和2台应用服务器（硬件配置相同）作为示例，系统均为CentOS7.4，网址为https://blog.yufuping.com，转发服务器为443端口，内网转发到应用服务器的80端口。本教程采用权重策略，其他策略可参考网络资料。 第一步，安装转发Nginx安装gcc1yum install gcc gcc-c++ 安装pcre1yum install -y pcre pcr">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.yupoxiong.com/tags/git/">
+  <link rel="canonical" href="https://blog.yupoxiong.com/2019/03/23/CentOS系统配置Nginx-PHP负载均衡/">
 
 
 
@@ -123,7 +124,7 @@
   };
 </script>
 
-  <title>标签: git | 于破熊的博客</title>
+  <title>CentOS系统配置Nginx+PHP负载均衡 | 于破熊的博客</title>
   
 
 
@@ -171,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,7 +231,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -352,82 +353,273 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>git<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.yupoxiong.com/2019/03/23/CentOS系统配置Nginx-PHP负载均衡/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="于破熊">
+      <meta itemprop="description" content="记录一些接触过的技术和踩过的坑。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="于破熊的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/03/16/新手快速使用Github进行项目开发/" itemprop="url">
-            
-              <span itemprop="name">新手快速使用Github进行项目开发</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">CentOS系统配置Nginx+PHP负载均衡
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-16T22:23:04+08:00" content="2019-03-16">
-          03-16
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-23 23:04:14" itemprop="dateCreated datePublished" datetime="2019-03-23T23:04:14+08:00">2019-03-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-24 16:17:19" itemprop="dateModified" datetime="2019-03-24T16:17:19+08:00">2019-03-24</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/运维/" itemprop="url" rel="index"><span itemprop="name">运维</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/03/23/CentOS系统配置Nginx-PHP负载均衡/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/23/CentOS系统配置Nginx-PHP负载均衡/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/03/23/CentOS系统配置Nginx-PHP负载均衡/" class="leancloud_visitors" data-flag-title="CentOS系统配置Nginx+PHP负载均衡">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本教程采用1台转发服务器和2台应用服务器（硬件配置相同）作为示例，系统均为CentOS7.4，网址为<code>https://blog.yufuping.com</code>，转发服务器为443端口，内网转发到应用服务器的80端口。本教程采用权重策略，其他策略可参考网络资料。</p>
+<h4 id="第一步，安装转发Nginx"><a href="#第一步，安装转发Nginx" class="headerlink" title="第一步，安装转发Nginx"></a>第一步，安装转发Nginx</h4><h5 id="安装gcc"><a href="#安装gcc" class="headerlink" title="安装gcc"></a>安装gcc</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc gcc-c++</span><br></pre></td></tr></table></figure>
+<h5 id="安装pcre"><a href="#安装pcre" class="headerlink" title="安装pcre"></a>安装pcre</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y pcre pcre-devel</span><br></pre></td></tr></table></figure>
+<h5 id="安装zlib"><a href="#安装zlib" class="headerlink" title="安装zlib"></a>安装zlib</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y zlib zlib-devel</span><br></pre></td></tr></table></figure>
+<h5 id="安装openssl"><a href="#安装openssl" class="headerlink" title="安装openssl"></a>安装openssl</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure>
+<h5 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nginx.org/download/nginx-1.15.3.tar.gz</span><br></pre></td></tr></table></figure>
+<h5 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.15.3.tar.gz</span><br></pre></td></tr></table></figure>
+<h5 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.15.3</span><br></pre></td></tr></table></figure>
+<p>编译nginx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_gzip_static_module --with-http_ssl_module --with-stream</span><br></pre></td></tr></table></figure>
+<p>这里的<code>--with-stream</code> stream模块是为了配置负载均衡转发，应用服务器安装nginx可以不加。</p>
+<p>安装nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<h4 id="第二步，配置转发Nginx"><a href="#第二步，配置转发Nginx" class="headerlink" title="第二步，配置转发Nginx"></a>第二步，配置转发Nginx</h4><p>在nginx.conf中<code>http</code>内配置<code>upstream</code>，此处以<code>blog.yupoxiong.com</code>域名为示例。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream blog.yupoxiong.com &#123;</span><br><span class="line">       server  172.20.20.2:80 weight=1;  #第一个服务器</span><br><span class="line">       server  172.20.20.3:80 weight=1;  #第二个服务器</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>weight</code>为权重，如果机器配置不均衡，可以调整weight参数。例如第2台机器的配置为第1台机器的2倍，那就可以把第2台的<code>weight</code>改成2。</p>
+<p><code>server</code>内配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line"></span><br><span class="line">    listen       443 ssl;</span><br><span class="line">    server_name  blog.yupoxiong.com;</span><br><span class="line">    ssl_certificate      cert/blog.yupoxiong.crt;</span><br><span class="line">    ssl_certificate_key  cert/blog.yupoxiong.key;</span><br><span class="line">    ssl_session_cache    shared:SSL:1m;</span><br><span class="line">    ssl_session_timeout  5m;</span><br><span class="line">    ssl_ciphers  HIGH:!aNULL:!MD5;</span><br><span class="line">    ssl_prefer_server_ciphers  on;</span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass         http://blog.yupoxiong.com;</span><br><span class="line">        proxy_set_header   Host             $host;</span><br><span class="line">        proxy_set_header   X-Real-IP        $remote_addr;</span><br><span class="line">        proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="第三步，正常安装配置应用服务器Nginx和PHP即可"><a href="#第三步，正常安装配置应用服务器Nginx和PHP即可" class="headerlink" title="第三步，正常安装配置应用服务器Nginx和PHP即可"></a>第三步，正常安装配置应用服务器Nginx和PHP即可</h4><p>应用服务器nginx可以和转发服务器使用相同的命令，然后正常配置nginx.conf即可，以下为PHP的安装教程。</p>
+<p>安装php依赖<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c++  make zlib zlib-devel pcre pcre-devel  libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl curl-devel e2fsprogs e2fsprogs-devel krb5 krb5-devel openssl openssl-devel openldap openldap-devel nss_ldap openldap-clients openldap-servers</span><br></pre></td></tr></table></figure></p>
+<p>下载php7.2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://cn2.php.net/get/php-7.2.10.tar.gz/from/this/mirror</span><br></pre></td></tr></table></figure>
+<h5 id="解压-1"><a href="#解压-1" class="headerlink" title="解压"></a>解压</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf mirror</span><br></pre></td></tr></table></figure>
+<p>进入目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd mirror</span><br></pre></td></tr></table></figure></p>
+<p>编译php<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/php --with-config-file-path=/usr/local/php --with-openssl --enable-mbstring --enable-ftp --with-gd --with-jpeg-dir=/usr --with-png-dir=/usr --with-mysql=mysqlnd --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --with-pear --enable-sockets --with-freetype-dir=/usr --with-zlib --with-libxml-dir=/usr --with-xmlrpc --enable-zip --enable-fpm --enable-xml --enable-sockets --with-gd --with-zlib --with-iconv --enable-zip --with-freetype-dir=/usr/lib/ --enable-soap --enable-pcntl --enable-cli --with-curl --enable-bcmath</span><br></pre></td></tr></table></figure></p>
+<p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<p>配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp php.ini-production /usr/local/php/php.ini</span><br></pre></td></tr></table></figure></p>
+<p>php.ini开启错误显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">display_errors = On</span><br></pre></td></tr></table></figure></p>
+<p>复制启动脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ cp ./sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</span><br><span class="line"></span><br><span class="line">$ chmod +x /etc/init.d/php-fpm</span><br></pre></td></tr></table></figure></p>
+<p>修改php-fpm配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/php/etc</span><br><span class="line"></span><br><span class="line">$ cp php-fpm.conf.default php-fpm.conf</span><br><span class="line"></span><br><span class="line">$ vim php-fpm.conf</span><br></pre></td></tr></table></figure></p>
+<p>去掉 pid = run/php-fpm.pid 前面的分号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cd php-fpm.d</span><br><span class="line"></span><br><span class="line">$ cp www.conf.default www.conf</span><br><span class="line"></span><br><span class="line">$ vim www.conf</span><br></pre></td></tr></table></figure></p>
+<p>修改user和group的用户为当前用户(也可以不改，默认会添加nobody这个用户和用户组)</p>
+<p>【启动PHP】<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ /etc/init.d/php-fpm start        #php-fpm启动命令</span><br><span class="line"></span><br><span class="line">$ /etc/init.d/php-fpm stop         #php-fpm停止命令</span><br><span class="line"></span><br><span class="line">$ /etc/init.d/php-fpm restart        #php-fpm重启命令</span><br><span class="line"></span><br><span class="line">$ ps -ef | grep php 或者 ps -A | grep -i php  #查看是否已经成功启动PHP</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+            <a href="/tags/负载均衡/" rel="tag"># 负载均衡</a>
+          
+            <a href="/tags/环境/" rel="tag"># 环境</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/16/新手快速使用Github进行项目开发/" rel="next" title="新手快速使用Github进行项目开发">
+                <i class="fa fa-chevron-left"></i> 新手快速使用Github进行项目开发
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -447,8 +639,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -578,6 +779,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一步，安装转发Nginx"><span class="nav-number">1.</span> <span class="nav-text">第一步，安装转发Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装gcc"><span class="nav-number">1.1.</span> <span class="nav-text">安装gcc</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装pcre"><span class="nav-number">1.2.</span> <span class="nav-text">安装pcre</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装zlib"><span class="nav-number">1.3.</span> <span class="nav-text">安装zlib</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装openssl"><span class="nav-number">1.4.</span> <span class="nav-text">安装openssl</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下载"><span class="nav-number">1.5.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解压"><span class="nav-number">1.6.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#进入目录"><span class="nav-number">1.7.</span> <span class="nav-text">进入目录</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二步，配置转发Nginx"><span class="nav-number">2.</span> <span class="nav-text">第二步，配置转发Nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三步，正常安装配置应用服务器Nginx和PHP即可"><span class="nav-number">3.</span> <span class="nav-text">第三步，正常安装配置应用服务器Nginx和PHP即可</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#解压-1"><span class="nav-number">3.1.</span> <span class="nav-text">解压</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -732,6 +950,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -771,6 +993,8 @@
 
 
 
+
+  
 
 
   
