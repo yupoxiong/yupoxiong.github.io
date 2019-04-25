@@ -98,24 +98,27 @@
 
 
 
-  <meta name="description" content="记录一些接触过的技术和踩过的坑。">
-<meta name="keywords" content="于破熊,PHP,MySql,Blog,JAVA,Linux,Go,Laravel,ThinkPHP,程序员,代码,软件开发,网站开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="于破熊的博客">
-<meta property="og:url" content="https://blog.yupoxiong.com/categories/PHP/index.html">
+  <meta name="description" content="最近突然遇到一个问题，PHPExcel导出的数据报错，如下图： 顺着报错的行数开始找，发现有个微信昵称是=开头的，excel如果单元格第一个字符为等号的话就会当成计算来处理，后面不是合法的表达式，所以报错。解决方法很简单，在昵称前面加个单引号即可解决。如下：1$record[&apos;nickname&apos;] = &quot;&apos;&quot; . $d-&amp;gt;nickname; 问题是小问题，不过这种细节值得开发的时候注意。踩坑">
+<meta name="keywords" content="PHPExcel,php,excel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP导出Excel报错-Formula Error: An unexpected error occured">
+<meta property="og:url" content="https://blog.yupoxiong.com/2019/04/25/PHP导出Excel报错-Formula-Error-An-unexpected-error-occured/index.html">
 <meta property="og:site_name" content="于破熊的博客">
-<meta property="og:description" content="记录一些接触过的技术和踩过的坑。">
+<meta property="og:description" content="最近突然遇到一个问题，PHPExcel导出的数据报错，如下图： 顺着报错的行数开始找，发现有个微信昵称是=开头的，excel如果单元格第一个字符为等号的话就会当成计算来处理，后面不是合法的表达式，所以报错。解决方法很简单，在昵称前面加个单引号即可解决。如下：1$record[&apos;nickname&apos;] = &quot;&apos;&quot; . $d-&amp;gt;nickname; 问题是小问题，不过这种细节值得开发的时候注意。踩坑">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2019/04/25/5cc1a8105192d.png">
+<meta property="og:updated_time" content="2019-04-25T12:52:49.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="于破熊的博客">
-<meta name="twitter:description" content="记录一些接触过的技术和踩过的坑。">
+<meta name="twitter:title" content="PHP导出Excel报错-Formula Error: An unexpected error occured">
+<meta name="twitter:description" content="最近突然遇到一个问题，PHPExcel导出的数据报错，如下图： 顺着报错的行数开始找，发现有个微信昵称是=开头的，excel如果单元格第一个字符为等号的话就会当成计算来处理，后面不是合法的表达式，所以报错。解决方法很简单，在昵称前面加个单引号即可解决。如下：1$record[&apos;nickname&apos;] = &quot;&apos;&quot; . $d-&amp;gt;nickname; 问题是小问题，不过这种细节值得开发的时候注意。踩坑">
+<meta name="twitter:image" content="https://i.loli.net/2019/04/25/5cc1a8105192d.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.yupoxiong.com/categories/PHP/">
+  <link rel="canonical" href="https://blog.yupoxiong.com/2019/04/25/PHP导出Excel报错-Formula-Error-An-unexpected-error-occured/">
 
 
 
@@ -125,7 +128,7 @@
   };
 </script>
 
-  <title>分类: PHP | 于破熊的博客</title>
+  <title>PHP导出Excel报错-Formula Error: An unexpected error occured | 于破熊的博客</title>
   
 
 
@@ -173,7 +176,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,7 +252,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -354,187 +357,230 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>PHP<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.yupoxiong.com/2019/04/25/PHP导出Excel报错-Formula-Error-An-unexpected-error-occured/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="于破熊">
+      <meta itemprop="description" content="记录一些接触过的技术和踩过的坑。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="于破熊的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/25/PHP导出Excel报错-Formula-Error-An-unexpected-error-occured/" itemprop="url">
-            
-              <span itemprop="name">PHP导出Excel报错-Formula Error: An unexpected error occured</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">PHP导出Excel报错-Formula Error: An unexpected error occured
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-25T21:08:34+08:00" content="2019-04-25">
-          04-25
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-25 21:08:34 / 修改时间：20:52:49" itemprop="dateCreated datePublished" datetime="2019-04-25T21:08:34+08:00">2019-04-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/04/25/PHP导出Excel报错-Formula-Error-An-unexpected-error-occured/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/25/PHP导出Excel报错-Formula-Error-An-unexpected-error-occured/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/04/25/PHP导出Excel报错-Formula-Error-An-unexpected-error-occured/" class="leancloud_visitors" data-flag-title="PHP导出Excel报错-Formula Error: An unexpected error occured">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/23/关于微信授权登录提示错误代码40163的问题/" itemprop="url">
-            
-              <span itemprop="name">关于微信授权登录提示错误代码40163的问题</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-23T20:47:41+08:00" content="2019-04-23">
-          04-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/30/ThinkPHP5报-Namespace-declaration-statement-has-to-be-the-very-first-statement-or-after-any-declare-call-in-the-script-错误的解决方法/" itemprop="url">
-            
-              <span itemprop="name">ThinkPHP5报 Namespace declaration statement has to be the very first statement or after any declare call in the script 错误的解决方法</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-30T20:47:08+08:00" content="2019-03-30">
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/27/MacOS快速搭建Nginx-PHP-MySql-Redis开发环境教程/" itemprop="url">
-            
-              <span itemprop="name">MacOS快速搭建Nginx+PHP+MySql+Redis开发环境教程</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-27T22:31:35+08:00" content="2019-03-27">
-          03-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/08/那些令人尴尬的BUG/" itemprop="url">
-            
-              <span itemprop="name">那些令人尴尬的BUG</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-08T22:53:36+08:00" content="2019-03-08">
-          03-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p>最近突然遇到一个问题，PHPExcel导出的数据报错，如下图：<br><img src="https://i.loli.net/2019/04/25/5cc1a8105192d.png" alt="Excel报错" title="Excel报错"></p>
+<p>顺着报错的行数开始找，发现有个微信昵称是=开头的，excel如果单元格第一个字符为等号的话就会当成计算来处理，后面不是合法的表达式，所以报错。解决方法很简单，在昵称前面加个单引号即可解决。如下：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$record[<span class="string">'nickname'</span>] = <span class="string">"'"</span> . $d-&gt;nickname;</span><br></pre></td></tr></table></figure></p>
+<p>问题是小问题，不过这种细节值得开发的时候注意。踩坑之后，遇到了类似的场景，提前处理规避才是上策啊。</p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/PHPExcel/" rel="tag"># PHPExcel</a>
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/excel/" rel="tag"># excel</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/23/关于微信授权登录提示错误代码40163的问题/" rel="next" title="关于微信授权登录提示错误代码40163的问题">
+                <i class="fa fa-chevron-left"></i> 关于微信授权登录提示错误代码40163的问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -867,6 +913,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -906,6 +956,8 @@
 
 
 
+
+  
 
 
   

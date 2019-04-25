@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP导出Excel报错-Formula Error: An unexpected error occured]]></title>
+    <url>%2F2019%2F04%2F25%2FPHP%E5%AF%BC%E5%87%BAExcel%E6%8A%A5%E9%94%99-Formula-Error-An-unexpected-error-occured%2F</url>
+    <content type="text"><![CDATA[最近突然遇到一个问题，PHPExcel导出的数据报错，如下图： 顺着报错的行数开始找，发现有个微信昵称是=开头的，excel如果单元格第一个字符为等号的话就会当成计算来处理，后面不是合法的表达式，所以报错。解决方法很简单，在昵称前面加个单引号即可解决。如下：1$record['nickname'] = "'" . $d-&gt;nickname; 问题是小问题，不过这种细节值得开发的时候注意。踩坑之后，遇到了类似的场景，提前处理规避才是上策啊。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHPExcel</tag>
+        <tag>php</tag>
+        <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于微信授权登录提示错误代码40163的问题]]></title>
+    <url>%2F2019%2F04%2F23%2F%E5%85%B3%E4%BA%8E%E5%BE%AE%E4%BF%A1%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95%E6%8F%90%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%8140163%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[错误如下：1Authorize Failed: &#123;"errcode":40163,"errmsg":"code been used, hints: [ req_id: KJmBZRLnRa-kATyOa ]"&#125; 关于这个错误，一般会有两重情况，第一种就是网上大部分人所提到的，程序自身重复使用code，还有一种情况就是，程序有错误，导致重复请求，这种情况一在做开发的时候被忽略。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>微信开发</tag>
+        <tag>公众号开发</tag>
+        <tag>微信授权登录</tag>
+        <tag>PHP开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[记一次jquery validation 验证 select2的问题]]></title>
     <url>%2F2019%2F04%2F13%2F%E8%AE%B0%E4%B8%80%E6%AC%A1jquery-validation-%E9%AA%8C%E8%AF%81-select2%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[最近遇到一个问题，在表单页使用了jQuery Validation验证插件，但是页面内同时使用了select2插件，同时加了multiple属性，但是验证的时候死活不验证，于是上网搜索了相关资料，stackoverflow，csdn上都有类似的问题，但是给出的代码在我这里都不管用，于是这个折腾啊，中间差点考虑放弃前端验证，终于在捣鼓了2个小时之后终于解决了。 相关代码如下： html代码12345678910111213&lt;div class="form-group"&gt; &lt;label class="col-sm-2 control-label" for="role"&gt;角色&lt;/label&gt; &lt;div class="col-sm-10 col-md-4"&gt; &lt;select id="role" name="role[]" multiple="multiple" class="form-control" data-placeholder="请选择角色"&gt; &lt;option&gt;&lt;/option&gt; &lt;option value="1"&gt;管理员&lt;/option&gt; &lt;option value="2"&gt;财务&lt;/option&gt; &lt;option value="3"&gt;客服&lt;/option&gt; &lt;option value="4"&gt;运营&lt;/option&gt; &lt;option value="5"&gt;售后&lt;/option&gt; &lt;/select&gt; &lt;/div&gt;&lt;/div&gt; js代码12345678910111213141516171819202122232425&lt;script&gt; //select2 $('#role').select2(); //下面代码可以不加，加了用户体验会好一些 $(function () &#123; $("#role").change(function()&#123; $(this).valid(); &#125;); &#125;); //jqueryValidation表单验证 $('#dataForm').validate(&#123; ignore: '', rules: &#123; 'role[]': &#123; required: true &#125; &#125;, messages: &#123; 'role[]': &#123; required: '请选择角色' &#125; &#125;, &#125;);&lt;/script&gt; 最终效果图如下：]]></content>
@@ -16,8 +43,8 @@
         <category>PHP</category>
       </categories>
       <tags>
-        <tag>ThinkPHP</tag>
         <tag>PHP</tag>
+        <tag>ThinkPHP</tag>
         <tag>命名空间</tag>
       </tags>
   </entry>
