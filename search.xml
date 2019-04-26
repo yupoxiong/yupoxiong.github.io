@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[我要给平盖开发一个小程序]]></title>
+    <url>%2F2019%2F04%2F26%2F%E6%88%91%E8%A6%81%E7%BB%99%E5%B9%B3%E7%9B%96%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%A8%8B%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[从去年平盖出生后，我就打算给他做个微信小程序，记录他的成长。我认为，目前微信小程序是最好的记录载体，无论自己看，还是分享给家人，都非常方便，无需打开浏览器看网页，更不需要下载单独的App。可惜有了想法之后，实际行动却很缓慢，一拖再拖，转眼已然大半年过去了。还有不到两个月就是平盖的周岁生日了，我要赶在他周岁前做完，也算给他周岁的一个礼物，无论美丑，是否好用，这都是我所为他做的，也实现了我心里的承诺和目标。半途而废，虎头蛇尾，我不想他将来这样，虽不知道以后会如何教育，但现在唯有以身作则，树立榜样才是我最好的选择。 接下来，我会在博客中记录开发小程序的过程，一来有记录的过程可以让我更好的坚持下去，二来以后可以回过头来再看，必定感触极深。当然，本博客是记录技术的，还是技术记录为主，如果以后能帮助到那么一两个曾经和我同样迷茫的小白，那就再好不过了。]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+        <tag>微信小程序</tag>
+        <tag>宝宝记录</tag>
+        <tag>BabyRecord</tag>
+        <tag>平盖</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PHP导出Excel报错-Formula Error: An unexpected error occured]]></title>
     <url>%2F2019%2F04%2F25%2FPHP%E5%AF%BC%E5%87%BAExcel%E6%8A%A5%E9%94%99-Formula-Error-An-unexpected-error-occured%2F</url>
     <content type="text"><![CDATA[最近突然遇到一个问题，PHPExcel导出的数据报错，如下图： 顺着报错的行数开始找，发现有个微信昵称是=开头的，excel如果单元格第一个字符为等号的话就会当成计算来处理，后面不是合法的表达式，所以报错。解决方法很简单，在昵称前面加个单引号即可解决。如下：1$record['nickname'] = "'" . $d-&gt;nickname; 问题是小问题，不过这种细节值得开发的时候注意。踩坑之后，遇到了类似的场景，提前处理规避才是上策啊。]]></content>
