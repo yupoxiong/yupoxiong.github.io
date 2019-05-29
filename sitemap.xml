@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yupoxiong.com/2019/05/21/ThinkPHP6-0composer%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E8%AF%95%E6%B0%B4/</loc>
+    
+    <lastmod>2019-05-29T12:00:54.226Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.yupoxiong.com/2019/05/11/RESTful-API%E5%B8%B8%E7%94%A8HTTP%E7%8A%B6%E6%80%81%E7%A0%81%E6%95%B4%E7%90%86/</loc>
     
     <lastmod>2019-05-20T07:55:00.570Z</lastmod>

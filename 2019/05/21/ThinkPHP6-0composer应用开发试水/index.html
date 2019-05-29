@@ -98,25 +98,25 @@
 
 
 
-  <meta name="description" content="关于博客博客的由来其实很久之前就想写博客了，一个原因是学会了一些东西很快可能会忘掉，记录一下可以加深印象，同时回顾起来也很方便。还有一个原因就是，想要练习一下自己的文字表达能力，本来现在动笔的情况就非常少，如果也不码字，感觉以后写点东西都费劲。之前也试着用Wordpress搭建过博客，折腾过几个主题，写过几篇博文，但由于种种原因，最后不了了之。后来，自己开发过博客，中间由于前端水平较渣，对于现有的">
-<meta name="keywords" content="于破熊,PHP,MySql,Blog,JAVA,Linux,Go,Laravel,ThinkPHP,程序员,代码,软件开发,网站开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://blog.yupoxiong.com/about/index.html">
+  <meta name="description" content="TP6.0原生支持多应用，怎么理解呢，就是以前的application/admin模块、application/api模块之类的现在都都叫一个应用，admin应用、api应用，并且目录调整为app/admin、app/api，简洁了不少。TP6.0版本的应用比TP5.*版本的模块多了一些东西，看一下官方的说明：  6.0版本提供了对多应用的良好支持，每个应用是一个app目录的子目录，每个应用具有独">
+<meta name="keywords" content="php,composer,thinkphp,tp6.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ThinkPHP6.0composer应用开发试水">
+<meta property="og:url" content="https://blog.yupoxiong.com/2019/05/21/ThinkPHP6-0composer应用开发试水/index.html">
 <meta property="og:site_name" content="于破熊的博客">
-<meta property="og:description" content="关于博客博客的由来其实很久之前就想写博客了，一个原因是学会了一些东西很快可能会忘掉，记录一下可以加深印象，同时回顾起来也很方便。还有一个原因就是，想要练习一下自己的文字表达能力，本来现在动笔的情况就非常少，如果也不码字，感觉以后写点东西都费劲。之前也试着用Wordpress搭建过博客，折腾过几个主题，写过几篇博文，但由于种种原因，最后不了了之。后来，自己开发过博客，中间由于前端水平较渣，对于现有的">
+<meta property="og:description" content="TP6.0原生支持多应用，怎么理解呢，就是以前的application/admin模块、application/api模块之类的现在都都叫一个应用，admin应用、api应用，并且目录调整为app/admin、app/api，简洁了不少。TP6.0版本的应用比TP5.*版本的模块多了一些东西，看一下官方的说明：  6.0版本提供了对多应用的良好支持，每个应用是一个app目录的子目录，每个应用具有独">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-30T01:44:51.072Z">
+<meta property="og:updated_time" content="2019-05-29T12:00:54.226Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="关于博客博客的由来其实很久之前就想写博客了，一个原因是学会了一些东西很快可能会忘掉，记录一下可以加深印象，同时回顾起来也很方便。还有一个原因就是，想要练习一下自己的文字表达能力，本来现在动笔的情况就非常少，如果也不码字，感觉以后写点东西都费劲。之前也试着用Wordpress搭建过博客，折腾过几个主题，写过几篇博文，但由于种种原因，最后不了了之。后来，自己开发过博客，中间由于前端水平较渣，对于现有的">
+<meta name="twitter:title" content="ThinkPHP6.0composer应用开发试水">
+<meta name="twitter:description" content="TP6.0原生支持多应用，怎么理解呢，就是以前的application/admin模块、application/api模块之类的现在都都叫一个应用，admin应用、api应用，并且目录调整为app/admin、app/api，简洁了不少。TP6.0版本的应用比TP5.*版本的模块多了一些东西，看一下官方的说明：  6.0版本提供了对多应用的良好支持，每个应用是一个app目录的子目录，每个应用具有独">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.yupoxiong.com/about/">
+  <link rel="canonical" href="https://blog.yupoxiong.com/2019/05/21/ThinkPHP6-0composer应用开发试水/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>关于 | 于破熊的博客</title>
+  <title>ThinkPHP6.0composer应用开发试水 | 于破熊的博客</title>
   
 
 
@@ -284,7 +284,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -355,75 +355,233 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.yupoxiong.com/2019/05/21/ThinkPHP6-0composer应用开发试水/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="于破熊">
+      <meta itemprop="description" content="记录一些接触过的技术和踩过的坑。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="于破熊的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h4 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h4><h5 id="博客的由来"><a href="#博客的由来" class="headerlink" title="博客的由来"></a>博客的由来</h5><p>其实很久之前就想写博客了，一个原因是学会了一些东西很快可能会忘掉，记录一下可以加深印象，同时回顾起来也很方便。还有一个原因就是，想要练习一下自己的文字表达能力，本来现在动笔的情况就非常少，如果也不码字，感觉以后写点东西都费劲。之前也试着用Wordpress搭建过博客，折腾过几个主题，写过几篇博文，但由于种种原因，最后不了了之。后来，自己开发过博客，中间由于前端水平较渣，对于现有的前端模版也不是很满意，刚上线就放弃了。就这么拖了几年，终于这个博客在本月初的深夜诞生了。</p>
-<h5 id="博客的内容"><a href="#博客的内容" class="headerlink" title="博客的内容"></a>博客的内容</h5><p>主要内容是跟开发，运维相关的东西，大致包括并不限于PHP，JS，HTML，JAVA，C，Python，Go，MySql，Redis，Nginx，Docker等等</p>
-<h4 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h4>
+          <h1 class="post-title" itemprop="name headline">ThinkPHP6.0composer应用开发试水
+
+              
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-21 08:54:31" itemprop="dateCreated datePublished" datetime="2019-05-21T08:54:31+08:00">2019-05-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-29 20:00:54" itemprop="dateModified" datetime="2019-05-29T20:00:54+08:00">2019-05-29</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/05/21/ThinkPHP6-0composer应用开发试水/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/21/ThinkPHP6-0composer应用开发试水/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/05/21/ThinkPHP6-0composer应用开发试水/" class="leancloud_visitors" data-flag-title="ThinkPHP6.0composer应用开发试水">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>TP6.0原生支持多应用，怎么理解呢，就是以前的<code>application/admin</code>模块、<code>application/api</code>模块之类的现在都都叫一个应用，admin应用、api应用，并且目录调整为<code>app/admin</code>、<code>app/api</code>，简洁了不少。TP6.0版本的应用比TP5.*版本的模块多了一些东西，看一下官方的说明：</p>
+<blockquote>
+<p>6.0版本提供了对多应用的良好支持，每个应用是一个app目录的子目录，每个应用具有独立的路由、配置，以及控制器和模型等文件，这些应用可以公用框架核心以及扩展。而且可以支持composer应用加载。<br>今天，我们来试水一下composer应用。之前写过一个针对TP5.*的省市区composer扩展，今天我们就把它升级成TP6.0的composer应用。</p>
+</blockquote>
+<p>下面先简单介绍一下composer扩展包的开发，而TP6.0的应用只是composer包和正常模块（应用）的结合而已。</p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag"># php</a>
+          
+            <a href="/tags/composer/" rel="tag"># composer</a>
+          
+            <a href="/tags/thinkphp/" rel="tag"># thinkphp</a>
+          
+            <a href="/tags/tp6-0/" rel="tag"># tp6.0</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/11/RESTful-API常用HTTP状态码整理/" rel="next" title="RESTful API常用HTTP状态码整理">
+                <i class="fa fa-chevron-left"></i> RESTful API常用HTTP状态码整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -456,17 +614,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -650,23 +799,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于博客"><span class="nav-number">1.</span> <span class="nav-text">关于博客</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#博客的由来"><span class="nav-number">1.1.</span> <span class="nav-text">博客的由来</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#博客的内容"><span class="nav-number">1.2.</span> <span class="nav-text">博客的内容</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于我"><span class="nav-number">2.</span> <span class="nav-text">关于我</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
