@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cURL error 60: SSL certificate problem: unable to get local issuer certificate错误]]></title>
+    <url>%2F2019%2F07%2F03%2FcURL-error-60-SSL-certificate-problem-unable-to-get-local-issuer-certificate%E9%94%99%E8%AF%AF%2F</url>
+    <content type="text"><![CDATA[利用easywechat扩展调用微信付款到零钱的时候报一个错误，其实以前也遇到过，时间久了忘了怎么解决，所以记下来。错误内容如下：1cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html) 错误提示的很明确，无法获得本地颁发者证书，而证书的配置就在php.ini中的curl.cainfo，最多的情况就是该配置被;注释掉了，打开之后配置好cacert.pem就好了，证cacert.pem下载地址为https://curl.haxx.se/ca/cacert.pem 。配置如下：1curl.cainfo=/path/cacert.pem 配置完php.ini之后重载配置就可以了。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>SSL</tag>
+        <tag>CURL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[阿里云Composer全量镜像已出]]></title>
     <url>%2F2019%2F07%2F03%2F%E9%98%BF%E9%87%8C%E4%BA%91Composer%E5%85%A8%E9%87%8F%E9%95%9C%E5%83%8F%E5%B7%B2%E5%87%BA%2F</url>
     <content type="text"><![CDATA[团队Composer镜像之前一直在用https://www.phpcomposer.com/，后来某一天因为未知的原因无法再使用。团队里并不是每个人都能翻墙，开发起来很头疼，后来出现了https://php.cnpkg.org/和https://packagist.laravel-china.org/，各有优势。但因为之前的phpcomposer出现问题的经历，一直希望能有大厂站出来出一个快速，稳定的镜像。只能说，阿里云，真香。相关资料：阿里云 Composer 全量镜像]]></content>
@@ -67,8 +80,8 @@
         <category>PHP</category>
       </categories>
       <tags>
-        <tag>php</tag>
         <tag>PHPExcel</tag>
+        <tag>php</tag>
         <tag>excel</tag>
       </tags>
   </entry>
@@ -91,7 +104,12 @@
     <url>%2F2019%2F04%2F13%2F%E8%AE%B0%E4%B8%80%E6%AC%A1jquery-validation-%E9%AA%8C%E8%AF%81-select2%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[最近遇到一个问题，在表单页使用了jQuery Validation验证插件，但是页面内同时使用了select2插件，同时加了multiple属性，但是验证的时候死活不验证，于是上网搜索了相关资料，stackoverflow，csdn上都有类似的问题，但是给出的代码在我这里都不管用，于是这个折腾啊，中间差点考虑放弃前端验证，终于在捣鼓了2个小时之后终于解决了。 相关代码如下： html代码12345678910111213&lt;div class="form-group"&gt; &lt;label class="col-sm-2 control-label" for="role"&gt;角色&lt;/label&gt; &lt;div class="col-sm-10 col-md-4"&gt; &lt;select id="role" name="role[]" multiple="multiple" class="form-control" data-placeholder="请选择角色"&gt; &lt;option&gt;&lt;/option&gt; &lt;option value="1"&gt;管理员&lt;/option&gt; &lt;option value="2"&gt;财务&lt;/option&gt; &lt;option value="3"&gt;客服&lt;/option&gt; &lt;option value="4"&gt;运营&lt;/option&gt; &lt;option value="5"&gt;售后&lt;/option&gt; &lt;/select&gt; &lt;/div&gt;&lt;/div&gt; js代码12345678910111213141516171819202122232425&lt;script&gt; //select2 $('#role').select2(); //下面代码可以不加，加了用户体验会好一些 $(function () &#123; $("#role").change(function()&#123; $(this).valid(); &#125;); &#125;); //jqueryValidation表单验证 $('#dataForm').validate(&#123; ignore: '', rules: &#123; 'role[]': &#123; required: true &#125; &#125;, messages: &#123; 'role[]': &#123; required: '请选择角色' &#125; &#125;, &#125;);&lt;/script&gt; 最终效果图如下：]]></content>
       <tags>
-        <tag>jquery,select2,前端,javascript,jquery-validation,表单验证</tag>
+        <tag>jquery</tag>
+        <tag>select2</tag>
+        <tag>前端</tag>
+        <tag>javascript</tag>
+        <tag>jquery-validation</tag>
+        <tag>表单验证</tag>
       </tags>
   </entry>
   <entry>

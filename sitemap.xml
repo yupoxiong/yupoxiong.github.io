@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yupoxiong.com/2019/07/03/cURL-error-60-SSL-certificate-problem-unable-to-get-local-issuer-certificate%E9%94%99%E8%AF%AF/</loc>
+    
+    <lastmod>2019-07-03T08:03:13.806Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.yupoxiong.com/2019/04/13/%E8%AE%B0%E4%B8%80%E6%AC%A1jquery-validation-%E9%AA%8C%E8%AF%81-select2%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    
+    <lastmod>2019-07-03T07:45:27.462Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.yupoxiong.com/2019/07/03/%E9%98%BF%E9%87%8C%E4%BA%91Composer%E5%85%A8%E9%87%8F%E9%95%9C%E5%83%8F%E5%B7%B2%E5%87%BA/</loc>
     
     <lastmod>2019-07-03T03:48:19.137Z</lastmod>
@@ -47,13 +61,6 @@
     <loc>https://blog.yupoxiong.com/2019/04/23/%E5%85%B3%E4%BA%8E%E5%BE%AE%E4%BF%A1%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95%E6%8F%90%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%8140163%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2019-04-25T12:23:29.750Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.yupoxiong.com/2019/04/13/%E8%AE%B0%E4%B8%80%E6%AC%A1jquery-validation-%E9%AA%8C%E8%AF%81-select2%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    
-    <lastmod>2019-04-13T03:49:53.260Z</lastmod>
     
   </url>
   
