@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.yupoxiong.com/2019/07/03/%E9%98%BF%E9%87%8C%E4%BA%91Composer%E5%85%A8%E9%87%8F%E9%95%9C%E5%83%8F%E5%B7%B2%E5%87%BA/</loc>
+    
+    <lastmod>2019-07-03T03:48:19.137Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.yupoxiong.com/2019/05/21/ThinkPHP6-0composer%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E8%AF%95%E6%B0%B4/</loc>
     
-    <lastmod>2019-05-29T12:00:54.226Z</lastmod>
+    <lastmod>2019-05-29T12:00:54.220Z</lastmod>
     
   </url>
   
@@ -18,49 +25,49 @@
   <url>
     <loc>https://blog.yupoxiong.com/2019/04/27/%E5%AE%9D%E5%AE%9D%E8%AE%B0%E5%BD%95%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1/</loc>
     
-    <lastmod>2019-05-11T14:04:16.472Z</lastmod>
+    <lastmod>2019-05-11T14:04:16.470Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/2019/04/26/%E6%88%91%E8%A6%81%E7%BB%99%E5%B9%B3%E7%9B%96%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     
-    <lastmod>2019-04-26T14:13:21.787Z</lastmod>
+    <lastmod>2019-04-26T14:13:21.780Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/2019/04/25/PHP%E5%AF%BC%E5%87%BAExcel%E6%8A%A5%E9%94%99-Formula-Error-An-unexpected-error-occured/</loc>
     
-    <lastmod>2019-04-25T12:52:49.408Z</lastmod>
+    <lastmod>2019-04-25T12:52:49.400Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/2019/04/23/%E5%85%B3%E4%BA%8E%E5%BE%AE%E4%BF%A1%E6%8E%88%E6%9D%83%E7%99%BB%E5%BD%95%E6%8F%90%E7%A4%BA%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%8140163%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     
-    <lastmod>2019-04-25T12:23:29.753Z</lastmod>
+    <lastmod>2019-04-25T12:23:29.750Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/2019/04/13/%E8%AE%B0%E4%B8%80%E6%AC%A1jquery-validation-%E9%AA%8C%E8%AF%81-select2%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
     
-    <lastmod>2019-04-13T03:49:53.265Z</lastmod>
+    <lastmod>2019-04-13T03:49:53.260Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/2019/03/30/ThinkPHP5%E6%8A%A5-Namespace-declaration-statement-has-to-be-the-very-first-statement-or-after-any-declare-call-in-the-script-%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
     
-    <lastmod>2019-03-30T02:43:56.061Z</lastmod>
+    <lastmod>2019-03-30T02:43:56.060Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/2019/03/23/CentOS%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AENginx-PHP%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</loc>
     
-    <lastmod>2019-03-30T02:40:16.188Z</lastmod>
+    <lastmod>2019-03-30T02:40:16.180Z</lastmod>
     
   </url>
   
@@ -74,35 +81,35 @@
   <url>
     <loc>https://blog.yupoxiong.com/2019/03/27/MacOS%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BANginx-PHP-MySql-Redis%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2019-03-30T02:37:41.814Z</lastmod>
+    <lastmod>2019-03-30T02:37:41.810Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/2019/03/08/%E9%82%A3%E4%BA%9B%E4%BB%A4%E4%BA%BA%E5%B0%B4%E5%B0%AC%E7%9A%84BUG/</loc>
     
-    <lastmod>2019-03-30T02:37:36.492Z</lastmod>
+    <lastmod>2019-03-30T02:37:36.490Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/about/index.html</loc>
     
-    <lastmod>2019-03-30T01:44:51.072Z</lastmod>
+    <lastmod>2019-03-30T01:44:51.070Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/categories/index.html</loc>
     
-    <lastmod>2019-03-05T17:03:17.719Z</lastmod>
+    <lastmod>2019-03-05T17:03:17.710Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://blog.yupoxiong.com/tags/index.html</loc>
     
-    <lastmod>2019-03-05T17:03:12.195Z</lastmod>
+    <lastmod>2019-03-05T17:03:12.190Z</lastmod>
     
   </url>
   
