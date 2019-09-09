@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP中echo-print-printf-print_r-var_dump-var_export的区别]]></title>
+    <url>%2F2019%2F08%2F10%2FPHP%E4%B8%ADecho-print-printf-print-r-var-dump-var-export%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[echo和print相同点是语言结构，可以打印字符串和整型变量，无返回值。不同的是echo可有多个参数，用英文逗号隔开，print只能传入一个参数；echo无返回值，print返回值 1。 printf为输出格式化的字符串，f指format格式化。 print_r可以打印出复杂类型变量的值(如数组,对象) 。 var_dump可以打印出变量的类型和值，长度信息。 var_export与var_dump的区别就是，返回值可以直接作为变量值使用。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+        <tag>echo</tag>
+        <tag>print</tag>
+        <tag>printf</tag>
+        <tag>print_r</tag>
+        <tag>var_dump</tag>
+        <tag>var_export</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[cURL error 60: SSL certificate problem: unable to get local issuer certificate错误]]></title>
     <url>%2F2019%2F07%2F03%2FcURL-error-60-SSL-certificate-problem-unable-to-get-local-issuer-certificate%E9%94%99%E8%AF%AF%2F</url>
     <content type="text"><![CDATA[利用easywechat扩展调用微信付款到零钱的时候报一个错误，其实以前也遇到过，时间久了忘了怎么解决，所以记下来。错误内容如下：1cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html) 错误提示的很明确，无法获得本地颁发者证书，而证书的配置就在php.ini中的curl.cainfo，最多的情况就是该配置被;注释掉了，打开之后配置好cacert.pem就好了，证cacert.pem下载地址为https://curl.haxx.se/ca/cacert.pem 。配置如下：1curl.cainfo=/path/cacert.pem 配置完php.ini之后重载配置就可以了。]]></content>
