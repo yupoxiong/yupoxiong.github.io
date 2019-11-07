@@ -18,6 +18,9 @@
     <title><![CDATA[关于微信内ajax请求出现readyState为0的问题]]></title>
     <url>%2F2019%2F10%2F01%2F%E5%85%B3%E4%BA%8E%E5%BE%AE%E4%BF%A1%E5%86%85ajax%E8%AF%B7%E6%B1%82%E5%87%BA%E7%8E%B0readyState%E4%B8%BA0%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[这两天开发某公众号项目遇到一个问题，部分手机测试ajax上传图片的时候出现以下错误提示：1&#123;&quot;readyState&quot;:0,&quot;status&quot;:0,&quot;status Text&quot;:&quot;NetworkError:Failed to execute &apos;send&apos; on &apos;XMLHttpRequest&apos;: Failed to load...&quot;&#125; 这个是请求还没发出去的报错，就排除了服务端的原因。js方面也没有找到什么不兼容的代码，但是部分机型还是出现非常小的图片可以上传，但是稍微大点的就挂掉了。折腾了半天终于发现了一个大坑，在微信内使用ajax请求的时候，async参数要写成true才可以，示例代码如下：1234567891011121314151617181920212223242526272829$.ajax(&#123; url: '', type: 'POST', data: formData, // 告诉jQuery不要去处理发送的数据 processData: false, // 告诉jQuery不要去设置Content-Type请求头 contentType: false, async: true, //大坑就在这里，不能设置为fasle dataType: 'json', beforeSend: function() &#123; console.log("正在进行，请稍候"); var loadT = layer.msg('正在上传,请稍候…', &#123; icon: 16, time: 0, shade: [0.3, '#000'] &#125;); &#125;, success: function(result) &#123; console.log(result); &#125;, error: function(responseStr) &#123; alert(JSON.stringify(responseStr)); console.log(responseStr); &#125;, complete: function(result) &#123; layer.closeAll(); &#125;&#125;);]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
       <tags>
         <tag>微信开发</tag>
         <tag>公众号开发</tag>
@@ -146,6 +149,9 @@
     <title><![CDATA[记一次jquery validation 验证 select2的问题]]></title>
     <url>%2F2019%2F04%2F13%2F%E8%AE%B0%E4%B8%80%E6%AC%A1jquery-validation-%E9%AA%8C%E8%AF%81-select2%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[最近遇到一个问题，在表单页使用了jQuery Validation验证插件，但是页面内同时使用了select2插件，同时加了multiple属性，但是验证的时候死活不验证，于是上网搜索了相关资料，stackoverflow，csdn上都有类似的问题，但是给出的代码在我这里都不管用，于是这个折腾啊，中间差点考虑放弃前端验证，终于在捣鼓了2个小时之后终于解决了。 相关代码如下： html代码12345678910111213&lt;div class="form-group"&gt; &lt;label class="col-sm-2 control-label" for="role"&gt;角色&lt;/label&gt; &lt;div class="col-sm-10 col-md-4"&gt; &lt;select id="role" name="role[]" multiple="multiple" class="form-control" data-placeholder="请选择角色"&gt; &lt;option&gt;&lt;/option&gt; &lt;option value="1"&gt;管理员&lt;/option&gt; &lt;option value="2"&gt;财务&lt;/option&gt; &lt;option value="3"&gt;客服&lt;/option&gt; &lt;option value="4"&gt;运营&lt;/option&gt; &lt;option value="5"&gt;售后&lt;/option&gt; &lt;/select&gt; &lt;/div&gt;&lt;/div&gt; js代码12345678910111213141516171819202122232425&lt;script&gt; //select2 $('#role').select2(); //下面代码可以不加，加了用户体验会好一些 $(function () &#123; $("#role").change(function()&#123; $(this).valid(); &#125;); &#125;); //jqueryValidation表单验证 $('#dataForm').validate(&#123; ignore: '', rules: &#123; 'role[]': &#123; required: true &#125; &#125;, messages: &#123; 'role[]': &#123; required: '请选择角色' &#125; &#125;, &#125;);&lt;/script&gt; 最终效果图如下：]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
       <tags>
         <tag>javascript</tag>
         <tag>jquery</tag>
