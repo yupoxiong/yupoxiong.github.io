@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[在PhpStorm中创建自己的代码模版]]></title>
-    <url>%2F2019%2F11%2F07%2F%E5%9C%A8PhpStorm%E4%B8%AD%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E6%A8%A1%E7%89%88%2F</url>
+    <title><![CDATA[关于在thinkphp5中try catch提交事务一直抛出异常的问题]]></title>
+    <url>%2F2019%2F11%2F19%2F%E5%85%B3%E4%BA%8E%E5%9C%A8thinkphp5%E4%B8%ADtry-catch%E6%8F%90%E4%BA%A4%E4%BA%8B%E5%8A%A1%E4%B8%80%E7%9B%B4%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[在用ThinkPHP5.*框架开发中，曾经遇到过在try-catch内提交事务之后总是抛出异常的情况，代码如下：12345678910111213Db::startTrans();try&#123; $user = User::where('username',$name)-&gt;find(); $user-&gt;nickname = 'new-nickname'; $user-&gt;save(); Db::commit(); return $this-&gt;success('更新成功');&#125;catch (\Exception $exception)&#123; Db::rollback(); return $this-&gt;error('更新成功');&#125; 以上代码如果在catch内加个var_dump(1)，就会发现始终会输出1。原因在于$this-&gt;success()方法是有问题的，我们点开可以看到，success方法最后执行的代码是：1throw new HttpResponseException($response); 而HttpResponseException继承了\RuntimeException异常类，所以不管你怎么success其实都是抛出了异常。虽然TP有些地方的高度封装给我们带来了便利，但是对不熟悉框架的人来说有些可能就是坑。有兴趣的可以了解一下TP的架构和通读一遍TP的源代码，以减少各种因为不熟悉出现的坑。]]></content>
+      <categories>
+        <category>PHP</category>
+      </categories>
+      <tags>
+        <tag>ThinkPHP</tag>
+        <tag>事务</tag>
+        <tag>异常处理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在PhpStorm中创建自己的代码模板]]></title>
+    <url>%2F2019%2F11%2F07%2F%E5%9C%A8PhpStorm%E4%B8%AD%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF%2F</url>
     <content type="text"><![CDATA[点击菜单PhpStorm，选择Preferences，然后展开Editor，点击Live Templates，在右侧的窗口点击PHP，然后点击加号添加自己的模版即可。其中Abbreviation为缩写，Description为备注(描述)，Templat text就是具体生成的代码啦。例如我想输入try就打出try catch，截图如下：]]></content>
       <categories>
         <category>PHP</category>
