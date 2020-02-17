@@ -102,7 +102,7 @@
 <meta name="keywords" content="于破熊,PHP,MySql,Blog,JAVA,Linux,Go,Laravel,ThinkPHP,程序员,代码,软件开发,网站开发">
 <meta property="og:type" content="website">
 <meta property="og:title" content="于破熊的博客">
-<meta property="og:url" content="https://blog.yupoxiong.com/tags/Nginx/index.html">
+<meta property="og:url" content="https://blog.yupoxiong.com/tags/nginx/index.html">
 <meta property="og:site_name" content="于破熊的博客">
 <meta property="og:description" content="记录一些接触过的技术和踩过的坑。">
 <meta property="og:locale" content="zh-CN">
@@ -115,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.yupoxiong.com/tags/Nginx/">
+  <link rel="canonical" href="https://blog.yupoxiong.com/tags/nginx/">
 
 
 
@@ -125,7 +125,7 @@
   };
 </script>
 
-  <title>标签: Nginx | 于破熊的博客</title>
+  <title>标签: nginx | 于破熊的博客</title>
   
 
 
@@ -387,7 +387,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>Nginx<small>标签</small>
+        <h1>nginx<small>标签</small>
         </h1>
       </div>
 
@@ -399,43 +399,17 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/03/27/MacOS快速搭建Nginx-PHP-MySql-Redis开发环境教程/" itemprop="url">
+          <a class="post-title-link" href="/2020/02/17/一个由微信浏览器缓存引发的问题/" itemprop="url">
             
-              <span itemprop="name">MacOS快速搭建Nginx+PHP+MySql+Redis开发环境教程</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-27T22:31:35+08:00" content="2019-03-27">
-          03-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/03/23/CentOS系统配置Nginx-PHP负载均衡/" itemprop="url">
-            
-              <span itemprop="name">CentOS系统配置Nginx+PHP负载均衡</span>
+              <span itemprop="name">一个由微信浏览器缓存引发的问题</span>
             
           </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-23T23:04:14+08:00" content="2019-03-23">
-          03-23
+        <time class="post-time" itemprop="dateCreated" datetime="2020-02-17T20:19:39+08:00" content="2020-02-17">
+          02-17
         </time>
       </div>
 
@@ -493,7 +467,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -651,7 +625,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">60</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -724,7 +702,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1196,6 +1174,61 @@
     }
 
     // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+er popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
       if (isfetched === false) {

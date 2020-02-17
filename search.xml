@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一个由微信浏览器缓存引发的问题]]></title>
+    <url>%2F2020%2F02%2F17%2F%E4%B8%80%E4%B8%AA%E7%94%B1%E5%BE%AE%E4%BF%A1%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98%E5%BC%95%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[项目背景：企业微信，网页应用；开发工具为HBuilder，使用H5打包。问题背景：曾经让兼职开发的一个项目被同事Z接手，临时帮忙做点小功能，更新上去，好应对新年。问题现象：在本地测试没问题后同事就把打包好的文件替换了上去，结果陆续收到了很多人反馈白屏，有的刷新一遍就好了，有的无论怎么刷新始终是白屏。 中间折腾了很久也没有处理完这个问题，还害得Z跑到网吧(没电脑)去处理，在此表示感谢。期间Z忘了把提交到gitlab上，我穿着睡衣去的公司帮忙提交。折腾了大概一两天，无果。无奈替换回原来的版本，中间断断续续还是有白屏现象。 年后Z可能比较忙(惭愧，被我年前折腾惨了)，对于我的消息差不多基本属于看不到状态。没办法，还是得安排其他人来处理这个问题，于是找到了另一个同事L帮忙。可惜L那边事情更多(在此同样表示感谢)，但我实在找不到合适的人了。中间L更新了一个功能，传上去之后也有很多人反应白屏，我想，这个问题肯定是没修复。于是请求L找到原因并解决掉，不过L也没有什么好办法，无奈，我只能试着跟她一起来找原因。我看了一下打包后的文件，他们每个人的chunk-vendors.xxxx.js文件不一样，而index.html里只引了2个js。在盲目测试的时候发现Google浏览器在上传后也会白屏，一刷新就好了，在刷新之前我看到好多js是404状态，同时发现请求的chunk-vendors.xxxx.js是上一个人的。于是认为这是index.html文件缓存问题。接下来就开始处理微信缓存的问题了，踩坑开始～ 尝试在index.html的head中加了以下代码：1234&lt;meta http-equiv=&quot;Expires&quot; content=&quot;0&quot;&gt;&lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot;&gt;&lt;meta http-equiv=&quot;Cache-control&quot; content=&quot;no-cache&quot;&gt;&lt;meta http-equiv=&quot;Cache&quot; content=&quot;no-cache&quot;&gt; 结果后来才发现并不管用。还好同时在nginx配置文件中加入了以下代码：1234# 禁止缓存htmllocation = /front/index.html &#123; add_header Cache-Control &quot;no-cache, no-store&quot;;&#125; 这段代码在微信开发者工具中测试是管用的。 后来在网上搜到，以下代码也是管用的，暂未尝试，大家可以试试：1234location ~ .*\.(?:htm|html)$ &#123; expires -1; add_header Cache-Control &quot;private, no-store, no-cache, must-revalidate, proxy-revalidate&quot;;&#125; 这个大坑真的让人难以忘怀，终究还是很多技术掌握不到位导致的。哦，对了，我和Z、L都是后端。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>微信开发</tag>
+        <tag>javascript</tag>
+        <tag>缓存</tag>
+        <tag>nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于在thinkphp5中try catch提交事务一直抛出异常的问题]]></title>
     <url>%2F2019%2F11%2F19%2F%E5%85%B3%E4%BA%8E%E5%9C%A8thinkphp5%E4%B8%ADtry-catch%E6%8F%90%E4%BA%A4%E4%BA%8B%E5%8A%A1%E4%B8%80%E7%9B%B4%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[在用ThinkPHP5.*框架开发中，曾经遇到过在try-catch内提交事务之后总是抛出异常的情况，代码如下：12345678910111213Db::startTrans();try&#123; $user = User::where('username',$name)-&gt;find(); $user-&gt;nickname = 'new-nickname'; $user-&gt;save(); Db::commit(); return $this-&gt;success('更新成功');&#125;catch (\Exception $exception)&#123; Db::rollback(); return $this-&gt;error('更新成功');&#125; 以上代码如果在catch内加个var_dump(1)，就会发现始终会输出1。原因在于$this-&gt;success()方法是有问题的，我们点开可以看到，success方法最后执行的代码是：1throw new HttpResponseException($response); 而HttpResponseException继承了\RuntimeException异常类，所以不管你怎么success其实都是抛出了异常。虽然TP有些地方的高度封装给我们带来了便利，但是对不熟悉框架的人来说有些可能就是坑。有兴趣的可以了解一下TP的架构和通读一遍TP的源代码，以减少各种因为不熟悉出现的坑。]]></content>
@@ -36,8 +50,8 @@
       </categories>
       <tags>
         <tag>微信开发</tag>
-        <tag>公众号开发</tag>
         <tag>javascript</tag>
+        <tag>公众号开发</tag>
         <tag>jquery</tag>
         <tag>ajax</tag>
       </tags>
@@ -115,6 +129,9 @@
     <title><![CDATA[宝宝记录小程序功能模块设计]]></title>
     <url>%2F2019%2F04%2F27%2F%E5%AE%9D%E5%AE%9D%E8%AE%B0%E5%BD%95%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%2F</url>
     <content type="text"><![CDATA[小程序端主要功能功能概述暂定功能有添加宝宝功能，添加宝宝记录，添加宝宝重要事件，记录宝宝身高体重，分享宝宝给亲朋好友，可以查看亲朋好友分享过来的宝宝。 页面概述目前主要页面暂定两个，一个为首页，一个为我的，首页展示当前宝宝的信息和记录，我的页面展示个人信息和一些操作菜单。 程序框架前端使用小程序wxml、wxss和js开发，后端使用PHP开发，暂定ThinkPHP5.1框架。]]></content>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[我要给平盖开发一个小程序]]></title>
